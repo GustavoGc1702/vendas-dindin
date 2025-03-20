@@ -25,8 +25,9 @@ function atualizarTabela(vendas) {
             <td>${venda.id}</td>
             <td>${venda.nome_cliente}</td>
             <td>${venda.sabor_dindin}</td>
-            <td>${venda.quantidade}</td>
-            <td> R$ ${parseFloat(venda.total).toFixed(2)}</td>
+            <td style="text-align: center;">${venda.quantidade}</td>
+            <td>R$ ${parseFloat(venda.total).toFixed(2)}</td>
+            <td>${venda.metodo_pagamento}</td>
             <td>${venda.data_hora}</td>
         `;
     });
@@ -46,10 +47,12 @@ document.getElementById('formCadastro').addEventListener('submit', function(even
     const nomeCliente = document.getElementById('nome_cliente').value;
     const saborDindin = document.getElementById('sabor').value;
     const quantidade = document.getElementById('quantidade').value;
+    const metodoPagamento = document.getElementById('metodo_pagamento').value;
     const dataHora = new Date().toLocaleString();
-    const total = quantidade * 5 ;
+    const total = quantidade * 5;
+
     // Validação de campos
-    if (!nomeCliente || !saborDindin || !quantidade) {
+    if (!nomeCliente || !saborDindin || !quantidade || !metodoPagamento) {
         exibirMensagem('Todos os campos são obrigatórios!', 'error');
         return;
     }
@@ -60,6 +63,7 @@ document.getElementById('formCadastro').addEventListener('submit', function(even
         nome_cliente: nomeCliente,
         sabor_dindin: saborDindin,
         quantidade: parseInt(quantidade),
+        metodo_pagamento: metodoPagamento,
         data_hora: dataHora,
         total: parseInt(total)
     };
@@ -78,6 +82,7 @@ document.getElementById('formCadastro').addEventListener('submit', function(even
     document.getElementById('nome_cliente').value = '';
     document.getElementById('sabor').value = '';
     document.getElementById('quantidade').value = '';
+    document.getElementById('metodo_pagamento').value = '';
 
     // Exibir mensagem de sucesso
     exibirMensagem('Venda cadastrada com sucesso!', 'success');

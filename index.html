@@ -10,14 +10,16 @@
 <body>
 
     <div class="container">
-        <h1>Cadastro de Vendas de Dindin</h1>
+        <h1 class="text-center mb-4">Cadastro de Vendas de Dindin</h1>
 
         <!-- Formulário de Cadastro -->
-        <form id="formCadastro">
-            <label for="nome_cliente">Nome do Cliente:</label>
-            <input type="text" id="nome_cliente" name="nome_cliente" required>
+        <form id="formCadastro" class="mb-4">
+            <div class="form-group">
+                <label for="nome_cliente">Nome do Cliente:</label>
+                <input type="text" id="nome_cliente" name="nome_cliente" class="form-control" required>
+            </div>
 
-            <div>
+            <div class="form-group">
                 <label for="sabor_dindin">Sabor do Dindin:</label>
                 <select class="form-control" id="sabor" required>
                     <option value="">Selecione...</option>
@@ -29,18 +31,31 @@
                 </select>
             </div>
 
-            <label for="quantidade">Quantidade:</label>
-            <input type="number" id="quantidade" name="quantidade" required>
+            <div class="form-group">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" class="form-control" required>
+            </div>
 
-            <button type="submit">Cadastrar Venda</button>
+            <!-- Novo campo para Método de Pagamento -->
+            <div class="form-group">
+                <label for="metodo_pagamento">Método de Pagamento:</label>
+                <select class="form-control" id="metodo_pagamento" required>
+                    <option value="">Selecione...</option>
+                    <option value="Pix">Pix</option>
+                    <option value="Cartão">Cartão</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-success btn-block">Cadastrar Venda</button>
         </form>
 
         <!-- Mensagens de Feedback -->
-        <div id="feedback"></div>
+        <div id="feedback" class="text-center mb-4"></div>
 
         <!-- Tabela de Vendas -->
-        <h2>Vendas Registradas</h2>
-        <table id="tabelaVendas">
+        <h2 class="text-center mb-4">Vendas Registradas</h2>
+        <table id="tabelaVendas" class="table table-bordered table-striped">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -48,6 +63,7 @@
                     <th>Sabor</th>
                     <th>Quantidade</th>
                     <th>Total</th>
+                    <th>Método de Pagamento</th>
                     <th>Data e Hora</th>
                 </tr>
             </thead>
