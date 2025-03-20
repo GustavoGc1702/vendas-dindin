@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Vendas de Dindin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cadastro de Vendas de Dindin</h1>
+
+        <!-- Formulário de Cadastro -->
+        <form id="formCadastro">
+            <label for="nome_cliente">Nome do Cliente:</label>
+            <input type="text" id="nome_cliente" name="nome_cliente" required>
+
+            <div>
+                <label for="sabor_dindin">Sabor do Dindin:</label>
+                <select class="form-control" id="sabor" required>
+                    <option value="">Selecione...</option>
+                    <option value="Morango">Morango</option>
+                    <option value="Maracujá">Maracujá</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Coco">Coco</option>
+                    <option value="Limão">Limão</option>
+                </select>
+            </div>
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" required>
+
+            <button type="submit">Cadastrar Venda</button>
+        </form>
+
+        <!-- Mensagens de Feedback -->
+        <div id="feedback"></div>
+
+        <!-- Tabela de Vendas -->
+        <h2>Vendas Registradas</h2>
+        <table id="tabelaVendas">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Sabor</th>
+                    <th>Quantidade</th>
+                    <th>Total</th>
+                    <th>Data e Hora</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Vendas serão inseridas aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
