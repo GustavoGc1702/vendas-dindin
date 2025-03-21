@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Vendas de Dindin</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="src/style.css">
 </head>
+
 <body>
 
-    <div class="container">
-        <h1 class="text-center mb-4">Cadastro de Vendas de Dindin</h1>
-
+    <h1 class="text-center mb-4 animate__animated animate__fadeInDown">Cadastro de Vendas de Dindin</h1>
+    <div class="container mt-5">
         <!-- Formulário de Cadastro -->
         <form id="formCadastro" class="mb-4">
             <div class="form-group">
                 <label for="nome_cliente">Nome do Cliente:</label>
                 <input type="text" id="nome_cliente" name="nome_cliente" class="form-control" required>
             </div>
-
             <div class="form-group">
                 <label for="sabor_dindin">Sabor do Dindin:</label>
                 <select class="form-control" id="sabor" required>
@@ -30,12 +31,10 @@
                     <option value="Limão">Limão</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <label for="quantidade">Quantidade:</label>
                 <input type="number" id="quantidade" name="quantidade" class="form-control" required>
             </div>
-
             <!-- Novo campo para Método de Pagamento -->
             <div class="form-group">
                 <label for="metodo_pagamento">Método de Pagamento:</label>
@@ -46,14 +45,16 @@
                     <option value="Dinheiro">Dinheiro</option>
                 </select>
             </div>
-
             <button type="submit" class="btn btn-success btn-block">Cadastrar Venda</button>
         </form>
 
         <!-- Mensagens de Feedback -->
         <div id="feedback" class="text-center mb-4"></div>
+    </div>
 
-        <!-- Tabela de Vendas -->
+    <!-- Tabela de Vendas -->
+
+    <div class="container mt-5">
         <h2 class="text-center mb-4">Vendas Registradas</h2>
         <table id="tabelaVendas" class="table table-bordered table-striped">
             <thead>
@@ -75,4 +76,10 @@
 
     <script src="src/script.js"></script>
 </body>
+
+ <!-- Footer -->
+ <footer class="footer">
+    <p>&copy; 2025 Desenvolvido por Gustavo Carneiro. Todos os direitos reservados.</p>
+  </footer>
+
 </html>

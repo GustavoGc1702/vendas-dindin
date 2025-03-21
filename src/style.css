@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background: linear-gradient(135deg, #ff6e7f, #bfe9ff);
     color: #333;
 }
 
@@ -19,7 +19,14 @@ body {
     border-radius: 8px;
 }
 
-h1, h2 {
+h1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 2.5rem;
+}
+
+
+h2 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2em;
@@ -34,6 +41,8 @@ form {
 
 form label {
     font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
 }
 
 form input, form select {
@@ -43,18 +52,20 @@ form input, form select {
     border: 1px solid #ddd;
 }
 
-form button {
+form .btn {
     padding: 10px;
-    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
+    background-color: #ff6e7f;
+    border-color: #ff6e7f;
 }
 
-form button:hover {
-    background-color: #45a049;
+form .btn:hover {
+    background-color: #e65a6b;
+    border-color: #e65a6b;
 }
 
 #feedback {
@@ -77,6 +88,18 @@ table th, table td {
 
 table th {
     background-color: #f4f4f4;
+}
+
+footer {
+    background-color: #ff6e7f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer > p {
+    font-size: 1.1rem ;
 }
 
 @media (max-width: 767px) {
