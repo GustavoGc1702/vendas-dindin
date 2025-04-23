@@ -73,6 +73,10 @@ form .btn:hover {
     font-weight: bold;
 }
 
+div#table-container{
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     margin-top: 30px;
